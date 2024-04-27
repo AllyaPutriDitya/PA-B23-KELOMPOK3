@@ -775,6 +775,7 @@ def login():
             "Login admin",
             "Login user",
             "Login menggunakan akun perusahaan"
+            "Kembali"
         ])
 
         if pil == '1':
@@ -783,25 +784,46 @@ def login():
             User.login()
         elif pil == '3':
             Perusahaan.login()
+        elif pil == '4':
+            main()
         else:
             print("Pilihan tidak valid")
-            
-#Regist
+
+# Register
+def register():
+    while True:
+        print("\n========================= REGISTER ==============================")
+        nama = input("Masukkan nama anda : ")
+        password = input("Masukkan Password anda : ")
+        email = input("Masukkan E-mail anda : ")
+        kelamin = input("Masukkan jenis kelamin anda : ")
+        telp = ("Masukkan nomor telepon anda : ")
+        alamat = ("Masukkan Alamat anda : ")
+        pendidikan = input("Masukkan pendidikan terakhir anda : ")
+        pengalaman = input("Masukkan Pengalaman untuk profil anda : ")
+        keahlian = input("Masukkan keahlian yang anda miliki : ")
+        print ("Registrasi berhasil!")
+        main()
+        #buat inputannya masuk kedalam database, batasin inputannya sesuai database
+        #buat if elsenya, kalau berhasil diarahin ke main(). kalau gk valid ya print "inputan tidak valid, registrasi gagal"
 
 #main
-while True:
-    print ("\n\n=============== PROGRAM LOWONGAN KERJA UNTUK SEMUA ===============\n")
-    pil = choices([
-        "Login",
-        "Register",
-        "Keluar"
-    ])
+def main():
+    while True:
+        print ("\n\n=============== PROGRAM LOWONGAN KERJA UNTUK SEMUUA ===============\n")
+        pil = choices([
+            "Login",
+            "Register",
+            "Keluar"
+        ])
 
-    if pil == '1':
-        login()
-    elif pil == '2':
-        None #belum ada 
-    elif pil == '3':
-        break
-    else:
-        print ("Pilihan tidak valid")
+        if pil == '1':
+            login()
+        elif pil == '2':
+            register()
+        elif pil == '3':
+            break
+        else:
+            print ("Inputan tidak valid")
+
+main()
