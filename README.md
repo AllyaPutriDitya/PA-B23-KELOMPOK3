@@ -125,6 +125,7 @@ Jika pengguna belum memiliki akun, program menyediakan opsi registrasi. pengguna
 ### Halaman Menu Admin
 - *Terdapat pilihan melihat profil, mengelola lowongan, user, perusahaan, atau lamaran*
 ![Flowchart Capstone-Halaman-2 1](./res/(fix)-Admin1.jpg)
+
 Di dalam menu admin, admin mempunyai fitur untuk mengedit dan menghapus pada lowongan,user,perusahaan, atau lamaran. 
 
 - *Untuk melihat/menampilkan profil*
